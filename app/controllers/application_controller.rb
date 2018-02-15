@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/registrations' do
-    puts "We ar ein registrations"
+    puts "We are in registrations"
     puts params
     @user = User.new(name: params["name"], email: params["email"], password: params["password"])
     @user.save
