@@ -39,6 +39,7 @@ puts params
   end
 
   get '/users/home' do
+    @user = User.find(session[:id])
 
     erb :'/users/home'
   end
